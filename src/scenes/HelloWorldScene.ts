@@ -12,8 +12,11 @@ export default class HelloWorldScene extends Phaser.Scene {
   private D: Phaser.Input.Keyboard.Key;
   private S: Phaser.Input.Keyboard.Key;
   private W: Phaser.Input.Keyboard.Key;
-  private cursors: Phaser.Types.Input.Keyboard.CursorKeys;
-
+  private isMovingLeft: boolean = false;
+  private isMovingRight: boolean = false;
+  private isWDown: boolean = false;
+  private wCooldown: number = 1600;
+  private wCooldownTimer: Phaser.Time.TimerEvent;
   constructor() {
     super(SceneKeys.Game);
   }
@@ -29,6 +32,13 @@ export default class HelloWorldScene extends Phaser.Scene {
     this.Platform();
     this.Character();
     this.physics.add.collider(this.player, this.platform);
+    this.wCooldownTimer = this.time.addEvent({
+      delay: this.wCooldown,
+      callback: () => {
+        this.isWDown = false;
+      },
+      loop: false,
+    });
   }
 
   BackGround() {
@@ -54,21 +64,42 @@ export default class HelloWorldScene extends Phaser.Scene {
       .setCollideWorldBounds(true);
   }
 
-  update() {
-    this.cursors = this.input.keyboard.createCursorKeys();
+  update(t: number, dt: number) {
     this.A = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.S = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     this.W = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+
     if (this.A.isDown) {
-      this.player.setVelocityX(-160);
-    } else if (this.D.isDown) {
-      this.player.setVelocityX(160);
+      this.isMovingLeft = true;
+    } else {
+      this.isMovingLeft = false;
     }
-    if (this.W.isDown && this.player.body.touching.down) {
+
+    if (this.W.isDown && !this.isWDown) {
       this.player.setVelocityY(-160);
-    } else if (this.S.isDown) {
-      this.player.setVelocityY(+160);
+      this.isWDown = true;
+      this.wCooldownTimer.reset({
+        delay: this.wCooldown,
+        callback: () => {
+          this.isWDown = false;
+        },
+        loop: true,
+      });
+    }
+
+    if (this.D.isDown) {
+      this.isMovingRight = true;
+    } else {
+      this.isMovingRight = false;
+    }
+
+    if (this.isMovingLeft) {
+      this.player.setVelocityX(-160);
+    } else if (this.isMovingRight) {
+      this.player.setVelocityX(160);
+    } else {
+      this.player.setVelocityX(0);
     }
   }
 }
