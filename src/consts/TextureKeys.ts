@@ -5,6 +5,8 @@ enum TextureKeys {
   Background = "background",
   Platform = "platform",
   Player = "player",
+  Boss = "boss",
+  Bomb = "bomb",
 }
 
 export default TextureKeys;
