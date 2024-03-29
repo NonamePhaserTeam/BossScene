@@ -1,7 +1,8 @@
 import "phaser"
 
-import HelloWorldScene from "./scenes/HelloWorldScene"
+import BossFight from "./scenes/BossFight"
 import Preloader from "./scenes/Preloader"
+import Game from "./scenes/Game"
 
 import { gameSettings } from "./consts/GameSettings"
 
@@ -26,7 +27,8 @@ const config: Phaser.Types.Core.GameConfig = {
 
   scene: [
     Preloader,
-    HelloWorldScene,
+    Game,
+    BossFight,
   ],
 }
 
