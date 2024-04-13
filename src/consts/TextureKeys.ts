@@ -1,16 +1,23 @@
 // inserire qui le texture sotto forma di chiave valore per un utilizzo più veloce e ordinato nelle scene
 
-enum TextureKeys {
-  Logo = "logo",
-  Background = "background",
-  Platform = "platform",
-  Platform1 = "platform1",
-  Platform2 = "platform2",
-  Platform3 = "platform3",
-  Player = "player",
-  Boss = "boss",
-  Bomb = "bomb",
-  Attack = "attack",
+namespace TextureKeys
+{
+    export enum BossAngel
+    {
+        Background = 'bg-boss-angel',
+        Platform = 'platform-boss-angel',
+        AngelHealthbar = 'angel-boss-healthbar',
+        Angel = 'boss-angel'
+    }
+
+    export enum Assets
+    {
+        Player = 'player',
+        PlayerHealthBar = 'player-healthbar',
+        Bomb = 'bomb'
+    }
+
+    
 }
 
-export default TextureKeys;
+export default TextureKeys

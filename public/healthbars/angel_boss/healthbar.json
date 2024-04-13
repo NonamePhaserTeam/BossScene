@@ -1,0 +1,215 @@
+{
+  "frames": [
+    {
+      "filename": "healthbar1.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar2.png",
+      "frame": {
+        "x": 0,
+        "y": 40,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar3.png",
+      "frame": {
+        "x": 0,
+        "y": 80,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar4.png",
+      "frame": {
+        "x": 0,
+        "y": 120,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar5.png",
+      "frame": {
+        "x": 0,
+        "y": 160,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar6.png",
+      "frame": {
+        "x": 0,
+        "y": 200,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar7.png",
+      "frame": {
+        "x": 0,
+        "y": 240,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "healthbar8.png",
+      "frame": {
+        "x": 0,
+        "y": 280,
+        "w": 261,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 261,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "angel_healthbar.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 261,
+      "h": 320
+    },
+    "scale": 1
+  }
+}
