@@ -27,7 +27,9 @@ const config: Phaser.Types.Core.GameConfig = {
   },
 
   // scene: [Preloader, Game],
-  scene: [Preloader, HealthBar],
+  // scene: [Preloader, HealthBar],
+  scene: [Preloader, Game, HealthBar],
+  // scene: [Preloader, BossFight],
 };
 
 export default new Phaser.Game(config);

@@ -3,7 +3,6 @@
 enum SceneKeys {
   Preloader = "preloader",
   HealthBar = "healthbar",
-
   Game = "game",
   BossFight = "bossfight",
 }

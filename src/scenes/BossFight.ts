@@ -22,21 +22,19 @@ export default class BossFight extends Phaser.Scene {
   private boss: Phaser.Physics.Arcade.Image;
   private groupDanger: Phaser.Physics.Arcade.StaticGroup;
   private bomb: Phaser.Physics.Arcade.Sprite;
-  
+
   constructor() {
     super(SceneKeys.BossFight);
   }
 
-  preload() {
-    
-  }
+  preload() {}
 
   create() {
     let bossPositionX = 936;
     let bossPositionY = 400;
     let characterPositionX = 736;
     let characterPositionY = 860;
-    
+
     this.BackGround();
     this.Platform();
     this.Character(characterPositionX, characterPositionY);

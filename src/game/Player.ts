@@ -6,7 +6,7 @@ import TextureKeys from "../consts/TextureKeys";
 import AnimationKeys from "../consts/AnimationKeys";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
-  private speed = 250;
+  private speed = 500;
   private isMoving = false;
   private isAttacking = false;
   private health = 100;

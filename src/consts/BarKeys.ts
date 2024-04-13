@@ -1,9 +1,11 @@
 enum BarKeys {
-  HealthBar1 = "healtbar",
-  HealthBar2 = "healtbar2",
-  HealthBar3 = "healtbar3",
-  Background = "background",
-  Platform = "platform",
+  HealthBar1 = "hearts1",
+  HealthBar2 = "hearts2",
+  HealthBar3 = "hearts3",
+  HealthBar4 = "hearts4",
+  HealthBar5 = "hearts5",
+  HealthBar6 = "hearts6",
+  HealthBar7 = "hearts7",
   ButtonDown = "buttondown",
   ButtomUp = "buttomup",
 }
