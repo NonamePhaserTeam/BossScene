@@ -174,7 +174,7 @@
 //         this.setFlipX(true);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } // SINISTRA
 
 //       if (
@@ -188,7 +188,7 @@
 //         this.setFlipX(false);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } // DESTRA
 
 //       if (Key7.isDown && this.flipX) {
@@ -196,14 +196,14 @@
 //         this.setFlipX(true);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } // BASSO SINISTRA
 //       else if (Key6.isDown && this.flipX) {
 //         this.dirshot = "LEFT_UP";
 //         this.setFlipX(true);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } //ALTO SINISTRA
 
 //       if (Key7.isDown && !this.flipX) {
@@ -211,14 +211,14 @@
 //         this.setFlipX(false);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } // BASSO DESTRA
 //       else if (Key6.isDown && !this.flipX) {
 //         this.dirshot = "RIGHT_UP";
 //         this.setFlipX(false);
 //         this.isAttacking = true;
 //         this.anims.play(AnimationKeys.Player.fionda, true);
-//         this.handleResetFlag(this.enableShooting, 300);
+//         this.handleResetFlag(this.enableShooting, 2000);
 //       } // ALTO DESTRA
 //     }
 
@@ -463,7 +463,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setFlipX(true);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } // SINISTRA
 
       if (
@@ -477,7 +477,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setFlipX(false);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } // DESTRA
 
       if (Key7.isDown && this.flipX) {
@@ -485,14 +485,14 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setFlipX(true);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } // BASSO SINISTRA
       else if (Key6.isDown && this.flipX) {
         this.dirshot = "LEFT_UP";
         this.setFlipX(true);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } //ALTO SINISTRA
 
       if (Key7.isDown && !this.flipX) {
@@ -500,35 +500,40 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setFlipX(false);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } // BASSO DESTRA
       else if (Key6.isDown && !this.flipX) {
         this.dirshot = "RIGHT_UP";
         this.setFlipX(false);
         this.isAttacking = true;
         this.anims.play(AnimationKeys.Player.fionda, true);
-        this.handleResetFlag(this.enableShooting, 300);
+        this.handleResetFlag(this.enableShooting, 2000);
       } // ALTO DESTRA
     }
 
     this.on("animationcomplete", () => {
       this.isAttacking = false;
-      if (this.anims.currentAnim.key === "player-fionda") {
-        this.colpo = new Bullets(
-          this.scene,
-          this.body.x,
-          this.body.y,
-          this.dirshot
-        );
-        /* setTimeout(() => {
-					this.colpo.checkCollision()
-				}, 300); */
-      }
+      // if (this.anims.currentAnim.key === "player-fionda") {
+      //   this.colpo = new Bullets(
+      //     this.scene,
+      //     this.body.x,
+      //     this.body.y,
+      //     this.dirshot
+      //   );
+
+      //   /* setTimeout(() => {
+      // 		this.colpo.checkCollision()
+      // 	}, 300); */
+      // }
 
       if (this.anims.currentAnim.key === AnimationKeys.Player.Jump) {
         console.log(this.anims.currentAnim.key);
       }
     });
+  }
+
+  getDir() {
+    return this.dirshot;
   }
 
   HandleDamage() {

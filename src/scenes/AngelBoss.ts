@@ -8,6 +8,7 @@ import Player from "../game/Player";
 import Healthbar from "../game/HealthBar";
 import Angel from "../game/Angel";
 import { gameData } from "../consts/GameData";
+import Bullets from "../game/Bullets";
 
 export default class AngelBoss extends Phaser.Scene {
   private platform: Phaser.Physics.Arcade.Image;
@@ -19,6 +20,7 @@ export default class AngelBoss extends Phaser.Scene {
   };
 
   private boss: Angel;
+  private colpo: Bullets;
   private bossPosition = {
     x: 900,
     y: 300,
@@ -32,6 +34,14 @@ export default class AngelBoss extends Phaser.Scene {
   private S: Phaser.Input.Keyboard.Key;
   private D: Phaser.Input.Keyboard.Key;
   private Q: Phaser.Input.Keyboard.Key;
+  private E: Phaser.Input.Keyboard.Key;
+  private X: Phaser.Input.Keyboard.Key;
+  private P: Phaser.Input.Keyboard.Key;
+  private LEFT: Phaser.Input.Keyboard.Key;
+  private RIGHT: Phaser.Input.Keyboard.Key;
+  private UP: Phaser.Input.Keyboard.Key;
+  private DOWN: Phaser.Input.Keyboard.Key;
+
   private lastQ = 0;
   private countplayer = 0;
   private countboss = 0;
@@ -49,6 +59,15 @@ export default class AngelBoss extends Phaser.Scene {
     this.S = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     this.D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.Q = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q);
+    this.E = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
+    this.X = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X);
+    this.P = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.P);
+    this.LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
+    this.RIGHT = this.input.keyboard.addKey(
+      Phaser.Input.Keyboard.KeyCodes.RIGHT
+    );
+    this.UP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
+    this.DOWN = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
   }
 
   create() {
@@ -178,11 +197,36 @@ export default class AngelBoss extends Phaser.Scene {
       },
       callbackScope: this,
     });
+    this.colpo = new Bullets(this, this.player.x, this.player.y, "direction");
+    if (this.player && this.boss) {
+      // Esegui le operazioni solo se this.player e this.boss sono definiti
+      // Ad esempio:
+      this.physics.add.overlap(
+        this.colpo,
+        this.boss,
+        this.handleBulletBossCollision,
+        null,
+        this
+      );
+    }
   }
 
   update(time: number, delta: number) {
     this.player.HandleMovement(this.A, this.SPACE, this.D);
     this.playerHealthbar.updateBar(gameData.playerHealth);
+    // if (Phaser.Input.Keyboard.JustDown()) {
+    //   this.createRock();
+    // }
+    //codice nuovo
+    this.player.HandleAttack(
+      this.E,
+      this.X,
+      this.S,
+      this.LEFT,
+      this.RIGHT,
+      this.UP,
+      this.DOWN
+    );
 
     if (this.Q.isDown && time > 500 + this.lastQ) {
       this.lastQ = time;
@@ -198,6 +242,18 @@ export default class AngelBoss extends Phaser.Scene {
           // this.scene.start(SceneKeys.Jumper);
         }
       }
+    }
+    if (this.player.anims.currentAnim.key === "player-fionda") {
+      this.colpo = new Bullets(
+        this,
+        this.player.body.x,
+        this.player.body.y,
+        this.player.getDir()
+      );
+
+      /* setTimeout(() => {
+        this.colpo.checkCollision()
+      }, 300); */
     }
   }
 
@@ -264,5 +320,22 @@ export default class AngelBoss extends Phaser.Scene {
     const vx = Math.cos(angle) * speed;
     const vy = Math.sin(angle) * speed;
     this.boss.setVelocity(vx, vy);
+  }
+
+  // createRock() {
+  //   const characterPositionX = this.player.x;
+  //   const characterPositionY = this.player.y;
+
+  //   const rock = new Bullets(
+  //     this,
+  //     characterPositionX,
+  //     characterPositionY,
+  //     "RIGHT" // Direzione del proiettile (ad esempio, 'RIGHT')
+  //   );
+  // }
+
+  handleBulletBossCollision(colpo: any, boss: any) {
+    alert("Colpito");
+    colpo.destroy();
   }
 }

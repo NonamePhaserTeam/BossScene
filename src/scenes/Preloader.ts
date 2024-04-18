@@ -321,7 +321,7 @@ export default class Preloader extends Phaser.Scene {
 
     this.anims.create({
       key: AnimationKeys.Player.fionda,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.fionda, {
+      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
         start: 2,
         end: 3,
         zeroPad: 1,

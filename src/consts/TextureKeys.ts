@@ -12,6 +12,7 @@ namespace TextureKeys {
     Player = "player",
     PlayerHealthBar = "player-healthbar",
     Bomb = "bomb",
+    rock = "rock",
   }
 
   export enum Global {
