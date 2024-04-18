@@ -6,25 +6,24 @@ import TextureKeys from "../consts/TextureKeys";
 import AnimationKeys from "../consts/AnimationKeys";
 import { gameData } from "../consts/GameData";
 
-export default class Healthbar extends Phaser.GameObjects.Sprite 
-{
-    private frame_names: string
+export default class Healthbar extends Phaser.GameObjects.Sprite {
+  private frame_names: string;
 
-    constructor(scene: Phaser.Scene, x: number, y: number, texture: string) 
-	{
-		super(scene, x, y, texture);
+  constructor(scene: Phaser.Scene, x: number, y: number, texture: string) {
+    super(scene, x, y, texture);
 
-		this.scene.add.existing(this);
-	}
+    this.scene.add.existing(this);
+  }
 
-    setFrameProperties(name: string)
-    {
-        this.frame_names = name
-    }
+  setFrameProperties(name: string) {
+    this.frame_names = name;
+  }
 
-    updateBar(frame_number: number)
-    {
-        let frame = this.frame_names + frame_number + ".png"
-        this.setFrame(frame)
-    }
+  updateBar(frame_number: number) {
+    let frame = this.frame_names + frame_number + ".png";
+    // if (frame_number > 6) {
+    //   alert("gioco terminato");
+    // }
+    this.setFrame(frame);
+  }
 }

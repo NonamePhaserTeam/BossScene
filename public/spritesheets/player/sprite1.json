@@ -1,0 +1,1931 @@
+{
+  "textures": [
+    {
+      "image": "player.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 512,
+        "h": 644
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "morte12.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 19,
+            "w": 66,
+            "h": 34
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 66,
+            "h": 34
+          }
+        },
+        {
+          "filename": "morte11.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 58,
+            "h": 49
+          },
+          "frame": {
+            "x": 69,
+            "y": 1,
+            "w": 58,
+            "h": 49
+          }
+        },
+        {
+          "filename": "morte10.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 51,
+            "h": 52
+          },
+          "frame": {
+            "x": 129,
+            "y": 1,
+            "w": 51,
+            "h": 52
+          }
+        },
+        {
+          "filename": "jumpsprite3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 6,
+            "w": 54,
+            "h": 53
+          },
+          "frame": {
+            "x": 182,
+            "y": 1,
+            "w": 54,
+            "h": 53
+          }
+        },
+        {
+          "filename": "jumpsprite7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 6,
+            "w": 54,
+            "h": 53
+          },
+          "frame": {
+            "x": 238,
+            "y": 1,
+            "w": 54,
+            "h": 53
+          }
+        },
+        {
+          "filename": "morte9.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 46,
+            "h": 53
+          },
+          "frame": {
+            "x": 294,
+            "y": 1,
+            "w": 46,
+            "h": 53
+          }
+        },
+        {
+          "filename": "jumpsprite2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 4,
+            "w": 41,
+            "h": 55
+          },
+          "frame": {
+            "x": 342,
+            "y": 1,
+            "w": 41,
+            "h": 55
+          }
+        },
+        {
+          "filename": "morte6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 4,
+            "w": 41,
+            "h": 55
+          },
+          "frame": {
+            "x": 385,
+            "y": 1,
+            "w": 41,
+            "h": 55
+          }
+        },
+        {
+          "filename": "morte7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 4,
+            "w": 41,
+            "h": 55
+          },
+          "frame": {
+            "x": 428,
+            "y": 1,
+            "w": 41,
+            "h": 55
+          }
+        },
+        {
+          "filename": "spriteinginocchio8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 5,
+            "w": 40,
+            "h": 58
+          },
+          "frame": {
+            "x": 471,
+            "y": 1,
+            "w": 40,
+            "h": 58
+          }
+        },
+        {
+          "filename": "morte8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 4,
+            "w": 42,
+            "h": 55
+          },
+          "frame": {
+            "x": 1,
+            "y": 37,
+            "w": 42,
+            "h": 55
+          }
+        },
+        {
+          "filename": "muvment fight10.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 12,
+            "y": 3,
+            "w": 45,
+            "h": 56
+          },
+          "frame": {
+            "x": 45,
+            "y": 52,
+            "w": 45,
+            "h": 56
+          }
+        },
+        {
+          "filename": "muvment fight2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 3,
+            "w": 50,
+            "h": 56
+          },
+          "frame": {
+            "x": 92,
+            "y": 55,
+            "w": 50,
+            "h": 56
+          }
+        },
+        {
+          "filename": "muvment fight6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 12,
+            "y": 3,
+            "w": 43,
+            "h": 56
+          },
+          "frame": {
+            "x": 144,
+            "y": 56,
+            "w": 43,
+            "h": 56
+          }
+        },
+        {
+          "filename": "jumpsprite1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 44,
+            "h": 57
+          },
+          "frame": {
+            "x": 189,
+            "y": 56,
+            "w": 44,
+            "h": 57
+          }
+        },
+        {
+          "filename": "morte2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 2,
+            "w": 44,
+            "h": 57
+          },
+          "frame": {
+            "x": 235,
+            "y": 56,
+            "w": 44,
+            "h": 57
+          }
+        },
+        {
+          "filename": "morte3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 2,
+            "w": 45,
+            "h": 57
+          },
+          "frame": {
+            "x": 281,
+            "y": 56,
+            "w": 45,
+            "h": 57
+          }
+        },
+        {
+          "filename": "morte4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 2,
+            "w": 41,
+            "h": 57
+          },
+          "frame": {
+            "x": 328,
+            "y": 58,
+            "w": 41,
+            "h": 57
+          }
+        },
+        {
+          "filename": "morte5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 2,
+            "w": 41,
+            "h": 57
+          },
+          "frame": {
+            "x": 371,
+            "y": 58,
+            "w": 41,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 44,
+            "h": 57
+          },
+          "frame": {
+            "x": 414,
+            "y": 58,
+            "w": 44,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight12.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 12,
+            "y": 3,
+            "w": 43,
+            "h": 57
+          },
+          "frame": {
+            "x": 460,
+            "y": 61,
+            "w": 43,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 3,
+            "w": 42,
+            "h": 57
+          },
+          "frame": {
+            "x": 1,
+            "y": 94,
+            "w": 42,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight9.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 2,
+            "w": 45,
+            "h": 57
+          },
+          "frame": {
+            "x": 45,
+            "y": 110,
+            "w": 45,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 50,
+            "h": 57
+          },
+          "frame": {
+            "x": 92,
+            "y": 113,
+            "w": 50,
+            "h": 57
+          }
+        },
+        {
+          "filename": "muvment fight4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 3,
+            "w": 51,
+            "h": 57
+          },
+          "frame": {
+            "x": 144,
+            "y": 115,
+            "w": 51,
+            "h": 57
+          }
+        },
+        {
+          "filename": "dush1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 6,
+            "w": 45,
+            "h": 58
+          },
+          "frame": {
+            "x": 197,
+            "y": 115,
+            "w": 45,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fermo3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 49,
+            "h": 58
+          },
+          "frame": {
+            "x": 244,
+            "y": 115,
+            "w": 49,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fermo4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 49,
+            "h": 58
+          },
+          "frame": {
+            "x": 295,
+            "y": 117,
+            "w": 49,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight12.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 49,
+            "h": 58
+          },
+          "frame": {
+            "x": 346,
+            "y": 117,
+            "w": 49,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight13.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 49,
+            "h": 58
+          },
+          "frame": {
+            "x": 397,
+            "y": 117,
+            "w": 49,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 55,
+            "h": 58
+          },
+          "frame": {
+            "x": 448,
+            "y": 120,
+            "w": 55,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 58,
+            "h": 58
+          },
+          "frame": {
+            "x": 1,
+            "y": 169,
+            "w": 58,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 49,
+            "h": 58
+          },
+          "frame": {
+            "x": 61,
+            "y": 172,
+            "w": 49,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fight8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 53,
+            "h": 58
+          },
+          "frame": {
+            "x": 112,
+            "y": 174,
+            "w": 53,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fionda cammina1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 4,
+            "w": 54,
+            "h": 58
+          },
+          "frame": {
+            "x": 167,
+            "y": 175,
+            "w": 54,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fionda cammina6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 4,
+            "w": 61,
+            "h": 58
+          },
+          "frame": {
+            "x": 223,
+            "y": 175,
+            "w": 61,
+            "h": 58
+          }
+        },
+        {
+          "filename": "fionda cammina7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 4,
+            "w": 54,
+            "h": 58
+          },
+          "frame": {
+            "x": 286,
+            "y": 177,
+            "w": 54,
+            "h": 58
+          }
+        },
+        {
+          "filename": "jumpsprite4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 1,
+            "w": 50,
+            "h": 58
+          },
+          "frame": {
+            "x": 342,
+            "y": 177,
+            "w": 50,
+            "h": 58
+          }
+        },
+        {
+          "filename": "spriteinginocchio6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 5,
+            "w": 46,
+            "h": 58
+          },
+          "frame": {
+            "x": 394,
+            "y": 177,
+            "w": 46,
+            "h": 58
+          }
+        },
+        {
+          "filename": "jumpsprite5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 57,
+            "h": 58
+          },
+          "frame": {
+            "x": 442,
+            "y": 180,
+            "w": 57,
+            "h": 58
+          }
+        },
+        {
+          "filename": "spriteinginocchio7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 5,
+            "w": 43,
+            "h": 58
+          },
+          "frame": {
+            "x": 1,
+            "y": 229,
+            "w": 43,
+            "h": 58
+          }
+        },
+        {
+          "filename": "sparo fionda1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 69,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 59,
+            "h": 58
+          },
+          "frame": {
+            "x": 46,
+            "y": 232,
+            "w": 59,
+            "h": 58
+          }
+        },
+        {
+          "filename": "camminata2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 5,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 107,
+            "y": 234,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "sparo fionda3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 69,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 3,
+            "w": 63,
+            "h": 58
+          },
+          "frame": {
+            "x": 153,
+            "y": 235,
+            "w": 63,
+            "h": 58
+          }
+        },
+        {
+          "filename": "camminata4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 5,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 218,
+            "y": 235,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "camminata6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 5,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 264,
+            "y": 237,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "camminata7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 5,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 310,
+            "y": 237,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "camminata8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 5,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 356,
+            "y": 237,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "dush2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 5,
+            "w": 47,
+            "h": 59
+          },
+          "frame": {
+            "x": 402,
+            "y": 240,
+            "w": 47,
+            "h": 59
+          }
+        },
+        {
+          "filename": "dush3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 4,
+            "w": 52,
+            "h": 59
+          },
+          "frame": {
+            "x": 451,
+            "y": 240,
+            "w": 52,
+            "h": 59
+          }
+        },
+        {
+          "filename": "camminata3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 4,
+            "w": 43,
+            "h": 60
+          },
+          "frame": {
+            "x": 1,
+            "y": 289,
+            "w": 43,
+            "h": 60
+          }
+        },
+        {
+          "filename": "fermo1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 46,
+            "y": 292,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fermo2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 97,
+            "y": 295,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fermo5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 148,
+            "y": 295,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight10.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 199,
+            "y": 296,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight11.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 250,
+            "y": 298,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 58,
+            "h": 59
+          },
+          "frame": {
+            "x": 301,
+            "y": 298,
+            "w": 58,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 55,
+            "h": 59
+          },
+          "frame": {
+            "x": 361,
+            "y": 301,
+            "w": 55,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 53,
+            "h": 59
+          },
+          "frame": {
+            "x": 418,
+            "y": 301,
+            "w": 53,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fight9.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 49,
+            "h": 59
+          },
+          "frame": {
+            "x": 1,
+            "y": 353,
+            "w": 49,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fionda cammina2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 3,
+            "w": 62,
+            "h": 59
+          },
+          "frame": {
+            "x": 52,
+            "y": 356,
+            "w": 62,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fionda cammina4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 4,
+            "w": 55,
+            "h": 59
+          },
+          "frame": {
+            "x": 116,
+            "y": 356,
+            "w": 55,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fionda cammina5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 3,
+            "w": 62,
+            "h": 59
+          },
+          "frame": {
+            "x": 173,
+            "y": 357,
+            "w": 62,
+            "h": 59
+          }
+        },
+        {
+          "filename": "fionda cammina8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 3,
+            "w": 62,
+            "h": 59
+          },
+          "frame": {
+            "x": 237,
+            "y": 359,
+            "w": 62,
+            "h": 59
+          }
+        },
+        {
+          "filename": "morte1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 68,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 5,
+            "y": 0,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 301,
+            "y": 359,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "muvment fight11.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 347,
+            "y": 362,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "muvment fight3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 53,
+            "h": 59
+          },
+          "frame": {
+            "x": 393,
+            "y": 362,
+            "w": 53,
+            "h": 59
+          }
+        },
+        {
+          "filename": "muvment fight7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 2,
+            "w": 44,
+            "h": 59
+          },
+          "frame": {
+            "x": 448,
+            "y": 362,
+            "w": 44,
+            "h": 59
+          }
+        },
+        {
+          "filename": "spriteinginocchio5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 4,
+            "w": 46,
+            "h": 59
+          },
+          "frame": {
+            "x": 1,
+            "y": 414,
+            "w": 46,
+            "h": 59
+          }
+        },
+        {
+          "filename": "sparo fionda2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 69,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 6,
+            "y": 2,
+            "w": 63,
+            "h": 59
+          },
+          "frame": {
+            "x": 49,
+            "y": 417,
+            "w": 63,
+            "h": 59
+          }
+        },
+        {
+          "filename": "camminata1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 4,
+            "w": 44,
+            "h": 60
+          },
+          "frame": {
+            "x": 114,
+            "y": 417,
+            "w": 44,
+            "h": 60
+          }
+        },
+        {
+          "filename": "camminata5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 11,
+            "y": 4,
+            "w": 44,
+            "h": 60
+          },
+          "frame": {
+            "x": 160,
+            "y": 418,
+            "w": 44,
+            "h": 60
+          }
+        },
+        {
+          "filename": "fionda cammina3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 4,
+            "w": 61,
+            "h": 60
+          },
+          "frame": {
+            "x": 206,
+            "y": 420,
+            "w": 61,
+            "h": 60
+          }
+        },
+        {
+          "filename": "fionda cammina9.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 4,
+            "w": 61,
+            "h": 60
+          },
+          "frame": {
+            "x": 269,
+            "y": 420,
+            "w": 61,
+            "h": 60
+          }
+        },
+        {
+          "filename": "jumpsprite6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 55,
+            "h": 60
+          },
+          "frame": {
+            "x": 332,
+            "y": 423,
+            "w": 55,
+            "h": 60
+          }
+        },
+        {
+          "filename": "spriteinginocchio4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 12,
+            "y": 3,
+            "w": 45,
+            "h": 60
+          },
+          "frame": {
+            "x": 389,
+            "y": 423,
+            "w": 45,
+            "h": 60
+          }
+        },
+        {
+          "filename": "spriteinginocchio3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 9,
+            "y": 2,
+            "w": 48,
+            "h": 61
+          },
+          "frame": {
+            "x": 436,
+            "y": 423,
+            "w": 48,
+            "h": 61
+          }
+        },
+        {
+          "filename": "spriteinginocchio1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 14,
+            "y": 0,
+            "w": 43,
+            "h": 64
+          },
+          "frame": {
+            "x": 1,
+            "y": 475,
+            "w": 43,
+            "h": 64
+          }
+        },
+        {
+          "filename": "spriteinginocchio2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 64,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 10,
+            "y": 1,
+            "w": 47,
+            "h": 62
+          },
+          "frame": {
+            "x": 46,
+            "y": 478,
+            "w": 47,
+            "h": 62
+          }
+        },
+        {
+          "filename": "animazione spada3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 34,
+            "w": 70,
+            "h": 62
+          },
+          "frame": {
+            "x": 95,
+            "y": 480,
+            "w": 70,
+            "h": 62
+          }
+        },
+        {
+          "filename": "cammina spada6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 28,
+            "y": 27,
+            "w": 95,
+            "h": 62
+          },
+          "frame": {
+            "x": 167,
+            "y": 482,
+            "w": 95,
+            "h": 62
+          }
+        },
+        {
+          "filename": "animazione spada5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 23,
+            "y": 33,
+            "w": 96,
+            "h": 63
+          },
+          "frame": {
+            "x": 264,
+            "y": 485,
+            "w": 96,
+            "h": 63
+          }
+        },
+        {
+          "filename": "cammina spada3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 28,
+            "w": 70,
+            "h": 63
+          },
+          "frame": {
+            "x": 362,
+            "y": 485,
+            "w": 70,
+            "h": 63
+          }
+        },
+        {
+          "filename": "animazione spada1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 25,
+            "y": 27,
+            "w": 49,
+            "h": 69
+          },
+          "frame": {
+            "x": 434,
+            "y": 486,
+            "w": 49,
+            "h": 69
+          }
+        },
+        {
+          "filename": "cammina spada5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 31,
+            "y": 27,
+            "w": 88,
+            "h": 63
+          },
+          "frame": {
+            "x": 1,
+            "y": 542,
+            "w": 88,
+            "h": 63
+          }
+        },
+        {
+          "filename": "animazione spada6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 21,
+            "y": 33,
+            "w": 102,
+            "h": 63
+          },
+          "frame": {
+            "x": 91,
+            "y": 546,
+            "w": 102,
+            "h": 63
+          }
+        },
+        {
+          "filename": "cammina spada1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 30,
+            "y": 21,
+            "w": 44,
+            "h": 70
+          },
+          "frame": {
+            "x": 195,
+            "y": 546,
+            "w": 44,
+            "h": 70
+          }
+        },
+        {
+          "filename": "animazione spada2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 17,
+            "y": 25,
+            "w": 55,
+            "h": 71
+          },
+          "frame": {
+            "x": 241,
+            "y": 550,
+            "w": 55,
+            "h": 71
+          }
+        },
+        {
+          "filename": "cammina spada2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 17,
+            "y": 19,
+            "w": 55,
+            "h": 74
+          },
+          "frame": {
+            "x": 298,
+            "y": 550,
+            "w": 55,
+            "h": 74
+          }
+        },
+        {
+          "filename": "animazione spada4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 25,
+            "y": 11,
+            "w": 62,
+            "h": 85
+          },
+          "frame": {
+            "x": 355,
+            "y": 550,
+            "w": 62,
+            "h": 85
+          }
+        },
+        {
+          "filename": "cammina spada4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 128,
+            "h": 96
+          },
+          "spriteSourceSize": {
+            "x": 30,
+            "y": 5,
+            "w": 57,
+            "h": 86
+          },
+          "frame": {
+            "x": 419,
+            "y": 557,
+            "w": 57,
+            "h": 86
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:019dd8268f22c47a3c56153926c5f568:8f37476022cd2e105915b46ea7a76364:86d5339b780aedd87b35e2b7c0a7e11b$"
+  }
+}
