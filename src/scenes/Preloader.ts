@@ -82,9 +82,9 @@ export default class Preloader extends Phaser.Scene {
     // );
 
     this.load.atlas(
-      TextureKeys.player.player,
-      "spritesheets/player/.png",
-      "spritesheets/player/sprite1.json"
+      TextureKeys.Assets.Player,
+      "spritesheets/player/player.png",
+      "spritesheets/player/player.json"
     );
 
     //cuori
