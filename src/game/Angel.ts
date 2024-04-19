@@ -41,8 +41,8 @@ export default class Angel extends Phaser.Physics.Arcade.Sprite {
 
   OnHit(damage: number) {
     this.health -= damage;
-    console.log(this.health);
-    if (this.health <= 0) {
+	gameData.angelHealth += 1;
+	if (this.health <= 0) {
       this.isAlive = false;
       this.destroy(true);
     }

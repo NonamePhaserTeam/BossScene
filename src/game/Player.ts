@@ -179,6 +179,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     if (Key1.isDown) {
       this.isAttacking = true;
       this.anims.play(AnimationKeys.Player.Punch, true);
+	  console.log(this.isAttacking)
     } else if (Key2.isDown && !this.isTouchingDown) {
       this.isJumping = false;
       this.setVelocityY(this.speed * 20);
@@ -249,27 +250,36 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
       } // ALTO DESTRA
     }
 
-    this.on("animationcomplete", () => {
-      this.isAttacking = false;
-      if (this.anims.currentAnim.key === AnimationKeys.Player.Fionda) {
-        this.colpo = new Bullets(
-          this.scene,
-          this.body.x,
-          this.body.y + 40,
-          this.dirshot
-        );
-        this.scene.add.existing(this.colpo);
-        this.scene.physics.add.collider(this.colpo, this.mob, () => {
-          if (this.enableHit) this.mob.OnHit(10);
+    
+  }
 
-          this.enableHit = false;
-          setTimeout(() => {
-            this.enableHit = true;
-          }, 300);
-          // this.colpo.collide();
-        });
-      }
-    });
+  HandleCollision(): boolean {
+	  this.on("animationcomplete", () => {
+		  this.isAttacking = false;
+		  if (this.anims.currentAnim.key === AnimationKeys.Player.Fionda) {
+			  this.colpo = new Bullets(
+				  this.scene,
+				  this.body.x,
+				  this.body.y + 40,
+				  this.dirshot
+				);
+				this.scene.add.existing(this.colpo);
+				console.log("HandleCollision")
+		  this.scene.physics.add.collider(this.colpo, this.mob, () => {
+			if (this.enableHit) this.mob.OnHit(10);
+  
+			this.enableHit = false;
+			setTimeout(() => {
+			  this.enableHit = true;
+			}, 300);
+
+			return true;
+			console.log("hit")
+			// this.colpo.collide();
+		  });
+		}
+	  });
+	  return false;
   }
 
   HandleDamage() {

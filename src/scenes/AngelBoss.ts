@@ -43,7 +43,7 @@ export default class AngelBoss extends Phaser.Scene {
   private S: Phaser.Input.Keyboard.Key;
   private D: Phaser.Input.Keyboard.Key;
   private Q: Phaser.Input.Keyboard.Key;
-  private E: Phaser.Input.Keyboard.Key;
+  private ENTER: Phaser.Input.Keyboard.Key;
   private X: Phaser.Input.Keyboard.Key;
   private P: Phaser.Input.Keyboard.Key;
   private LEFT: Phaser.Input.Keyboard.Key;
@@ -69,7 +69,7 @@ export default class AngelBoss extends Phaser.Scene {
     this.S = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     this.D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.Q = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q);
-    this.E = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
+    this.ENTER = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
     this.X = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X);
     this.P = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.P);
     this.LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -229,13 +229,14 @@ export default class AngelBoss extends Phaser.Scene {
 
   update(time: number, delta: number) {
     this.player.HandleMovement(this.A, this.SPACE, this.D);
-    this.playerHealthbar.updateBar(gameData.playerHealth);
+	if(gameData.playerHealth <= 8)
+    	this.playerHealthbar.updateBar(gameData.playerHealth);
     // if (Phaser.Input.Keyboard.JustDown()) {
     //   this.createRock();
     // }
     //codice nuovo
     this.player.HandleAttack(
-      this.E,
+      this.ENTER,
       this.X,
       this.S,
       this.LEFT,
@@ -245,50 +246,47 @@ export default class AngelBoss extends Phaser.Scene {
     );
 
     // this.boss.BossMovement();
+	
+	if (this.player.HandleCollision()) {
+		this.countboss++;
+		// this.player.HandleDamage();
+		// this.playerHealthbar.updateBar(gameData.playerHealth);
+		gameData.angelHealth -= 1;
+		this.bossHealthbar.updateBar(gameData.angelHealth);
+		
+	// gameData.angelHealth += 1;
+	// this.bossHealthbar.updateBar(gameData.monsterHealth);
+		if (this.countboss == 7) {
+			alert("Player wins");
 
-    if (this.Q.isDown && time > 500 + this.lastQ) {
-      this.lastQ = time;
-      if (!this.player.BossDamaged()) {
-        this.countboss++;
-        // this.player.HandleDamage();
-        // this.playerHealthbar.updateBar(gameData.playerHealth);
+			this.bossHealthbar.destroy();
+			this.boss.destroy();
 
-        gameData.angelHealth += 1;
-        this.bossHealthbar.updateBar(gameData.angelHealth);
-        // this.bossHealthbar.updateBar(gameData.monsterHealth);
-        if (this.countboss == 7) {
-          alert("Player wins");
+			this.secondboss = new Monster(
+				this,
+				this.secondobossPosition.x,
+				this.secondobossPosition.y,
+				TextureKeys.Monster.Monster
+			);
 
-          this.bossHealthbar.destroy();
-          this.boss.destroy();
-
-          this.secondboss = new Monster(
-            this,
-            this.secondobossPosition.x,
-            this.secondobossPosition.y,
-            TextureKeys.Monster.Monster
-          );
-
-          this.monsterHealth = new Healthbar(
-            this,
-            gameSettings.gameWidth / 2,
-            100,
-            TextureKeys.Monster.MonsterHealthbar
-          );
-          this.monsterHealth.setFrameProperties("healthbar");
-          this.monsterHealth.setScale(2);
-          if (this.Q.isDown && time > 500 + this.lastQ) {
-            this.lastQ = time;
-            if (!this.player.BossDamaged()) {
-              gameData.monsterHealth += 1;
-              this.monsterHealth.updateBar(gameData.monsterHealth);
-            }
-          }
-          // this.scene.start(SceneKeys.Jumper);
-        }
-      }
-    }
-
+			this.monsterHealth = new Healthbar(
+				this,
+				gameSettings.gameWidth / 2,
+				100,
+				TextureKeys.Monster.MonsterHealthbar
+			);
+			this.monsterHealth.setFrameProperties("healthbar");
+			this.monsterHealth.setScale(2);
+			if (this.Q.isDown && time > 500 + this.lastQ) {
+				this.lastQ = time;
+				if (!this.player.BossDamaged()) {
+					gameData.monsterHealth += 1;
+					this.monsterHealth.updateBar(gameData.monsterHealth);
+				}
+			}
+			// this.scene.start(SceneKeys.Jumper);
+		}
+	}
     /* setTimeout(() => {
         this.colpo.checkCollision()
       }, 300); */

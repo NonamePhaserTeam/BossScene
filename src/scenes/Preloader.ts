@@ -279,97 +279,167 @@ export default class Preloader extends Phaser.Scene {
   // }
 
   CreatePlayerAnims() {
-    this.anims.create({
-      key: AnimationKeys.Player.Idle,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
-        start: 1,
-        end: 5,
-        zeroPad: 1,
-        prefix: "fermo",
-        suffix: ".png",
-      }),
-      frameRate: 8,
-      repeat: -1,
-    });
 
-    this.anims.create({
-      key: AnimationKeys.Player.Walk,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
-        start: 1,
-        end: 8,
-        zeroPad: 1,
-        prefix: "camminata",
-        suffix: ".png",
-      }),
-      frameRate: 8,
-      repeat: -1,
-    });
+	this.anims.create({
+		key: AnimationKeys.Player.Idle,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 5,
+			zeroPad: 1,
+			prefix: "fermo",
+			suffix: ".png",
+		}),
+		frameRate: 8,
+		repeat: -1,
+	});
 
-    this.anims.create({
-      key: AnimationKeys.Player.Jump,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
-        start: 4,
-        end: 6,
-        zeroPad: 1,
-        prefix: "jumpsprite",
-        suffix: ".png",
-      }),
-      frameRate: 5,
-      repeat: 0,
-    });
+	this.anims.create({
+		key: AnimationKeys.Player.Walk,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 8,
+			zeroPad: 1,
+			prefix: 'camminata',
+			suffix: '.png'
+		}),
+		frameRate: 8,
+		repeat: -1
+	});
 
-    this.anims.create({
-      key: AnimationKeys.Player.Punch,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
-        start: 2,
-        end: 10,
-        zeroPad: 1,
-        prefix: "fight",
-        suffix: ".png",
-      }),
-      frameRate: 12,
-      repeat: 0,
-    });
 
-    this.anims.create({
-      key: AnimationKeys.Player.Fionda,
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
-        start: 2,
-        end: 3,
-        zeroPad: 1,
-        prefix: "sparo fionda",
-        suffix: ".png",
-      }),
-      frameRate: 12,
-      repeat: 0,
-    });
+	this.anims.create({
+		key: AnimationKeys.Player.Jump,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 4,
+			end: 6,
+			zeroPad: 1,
+			prefix: 'jumpsprite',
+			suffix: '.png'
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
 
-    this.anims.create({
-      key: "loadfionda",
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.fionda, {
-        start: 2,
-        end: 2,
-        zeroPad: 0,
-        prefix: "sparo fionda",
-        suffix: ".png",
-      }),
-      frameRate: 8,
-      repeat: -1,
-    });
+	this.anims.create({
+		key: AnimationKeys.Player.Punch,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 2,
+			end: 10,
+			zeroPad: 1,
+			prefix: 'fight',
+			suffix: '.png'
+		}),
+		frameRate: 12,
+		repeat: 0,
+	});
 
-    this.anims.create({
-      key: "sparofionda",
-      frames: this.anims.generateFrameNames(TextureKeys.Texture.fionda, {
-        start: 3,
-        end: 3,
-        zeroPad: 0,
-        prefix: "sparo fionda",
-        suffix: ".png",
-      }),
-      frameRate: 8,
-      repeat: -1,
-    });
-  }
+	this.anims.create({
+		key: AnimationKeys.Player.Walk_punch,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 12,
+			zeroPad: 1,
+			prefix: "muvment fight",
+			suffix: ".png",
+		}),
+		frameRate: 12,
+		repeat: 0,
+	});
+
+	this.anims.create({
+		key: AnimationKeys.Player.Fionda,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 3,
+			zeroPad: 1,
+			prefix: "sparo fionda",
+			suffix: ".png",
+		}),
+		frameRate: 7,
+		repeat: 0,
+	});
+
+	this.anims.create({
+		key: AnimationKeys.Player.Walk_fionda,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 9,
+			zeroPad: 1,
+			prefix: "fionda cammina",
+			suffix: ".png",
+		}),
+		frameRate: 12,
+		repeat: 0,
+	});
+
+
+	this.anims.create({
+		key: AnimationKeys.Player.Sword,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 6,
+			zeroPad: 1,
+			prefix: "animazione spada",
+			suffix: ".png",
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
+
+
+	this.anims.create({
+		key: AnimationKeys.Player.Walk_sword,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 6,
+			zeroPad: 1,
+			prefix: "cammina spada",
+			suffix: ".png",
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
+
+
+	this.anims.create({
+		key: AnimationKeys.Player.Death,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 12,
+			zeroPad: 1,
+			prefix: "morte",
+			suffix: ".png",
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
+
+	this.anims.create({
+		key: AnimationKeys.Player.Ginocchio,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 8,
+			zeroPad: 1,
+			prefix: "spriteinginocchio",
+			suffix: ".png",
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
+
+	this.anims.create({
+		key: AnimationKeys.Player.Dush,
+		frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
+			start: 1,
+			end: 3,
+			zeroPad: 1,
+			prefix: "dush",
+			suffix: ".png",
+		}),
+		frameRate: 5,
+		repeat: 0,
+	});
+}
 
   // CreateEnemiesAnims() {
   //   this.anims.create({
