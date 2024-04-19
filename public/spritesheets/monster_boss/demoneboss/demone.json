@@ -1,0 +1,41 @@
+{
+	"textures": [
+		{
+			"image": "demone.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 17113,
+				"h": 128
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "demone.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 17280,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 105,
+						"y": 34,
+						"w": 17111,
+						"h": 126
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 17111,
+						"h": 126
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:44c3d02095f46672857adf5a2839e214:b000273ccabefb81c975b885e9217730:71c717c4cf923dc161f52d334f937cc2$"
+	}
+}

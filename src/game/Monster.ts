@@ -4,7 +4,7 @@ import { gameData } from "../consts/GameData";
 
 import AnimationKeys from "../consts/AnimationKeys";
 
-export default class Angel extends Phaser.Physics.Arcade.Sprite {
+export default class Monster extends Phaser.Physics.Arcade.Sprite {
   private speed = 250;
   private bodyObject: Phaser.Physics.Arcade.Body;
   private isMoving: boolean;
@@ -26,7 +26,7 @@ export default class Angel extends Phaser.Physics.Arcade.Sprite {
     this.bodyObject.setSize(this.body.width * 1, this.body.height * 1);
     this.bodyObject.setOffset(0, 0);
 
-    this.anims.play(AnimationKeys.AngelBoss.Idle);
+    this.anims.play(AnimationKeys.MonsterBoss.Idle);
     this.scene.add.existing(this);
 
     this.StopMovement();
@@ -49,23 +49,8 @@ export default class Angel extends Phaser.Physics.Arcade.Sprite {
   }
   BossMovement() {
     if (this.isAlive) {
-      const PositionX = [100, 300, 550, 675, 995];
-      const PositionY = [275, 335, 775, 675, 990];
-
-      const randomIndex = Phaser.Math.Between(0, PositionX.length - 1);
-
-      const targetX = PositionX[randomIndex];
-      const targetY = PositionY[randomIndex];
-
-      const dx = targetX - this.x;
-      const dy = targetY - this.y;
-
-      // Calculate the angle and speed
-      const angle = Math.atan2(dy, dx);
-      const speed = 50;
-      const vx = Math.cos(angle) * speed;
-      const vy = Math.sin(angle) * speed;
-      this.setVelocity(vx, vy);
+      const PositionX = 900;
+      const PositionY = 1100;
     }
   }
 
