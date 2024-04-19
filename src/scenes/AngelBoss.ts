@@ -9,9 +9,11 @@ import Healthbar from "../game/HealthBar";
 import Angel from "../game/Angel";
 import { gameData } from "../consts/GameData";
 import Bullets from "../game/Bullets";
+import Monster from "../game/Monster";
 
 export default class AngelBoss extends Phaser.Scene {
   private platform: Phaser.Physics.Arcade.Image;
+  private platform2: Phaser.Physics.Arcade.Image;
 
   private player: Player;
   private playerPosition = {
@@ -20,14 +22,21 @@ export default class AngelBoss extends Phaser.Scene {
   };
 
   private boss: Angel;
+  private secondboss: Monster;
   private colpo: Bullets;
   private bossPosition = {
     x: 900,
     y: 300,
   };
 
+  private secondobossPosition = {
+    x: 900,
+    y: 300,
+  };
+
   private playerHealthbar: Healthbar;
   private bossHealthbar: Healthbar;
+  private monsterHealth: Healthbar;
 
   private SPACE: Phaser.Input.Keyboard.Key;
   private A: Phaser.Input.Keyboard.Key;
@@ -45,6 +54,7 @@ export default class AngelBoss extends Phaser.Scene {
   private lastQ = 0;
   private countplayer = 0;
   private countboss = 0;
+  private secondbountBoss = 0;
   private bombs: Phaser.GameObjects.Container;
 
   constructor() {
@@ -141,45 +151,51 @@ export default class AngelBoss extends Phaser.Scene {
     map1.setDepth(-920);
 
     this.platform = this.physics.add
-      .staticImage(936, 950, TextureKeys.BossAngel.Platform)
-      .setSize(1750, 125)
-      .setScale(1.28, 0.2);
+      .staticImage(
+        gameSettings.gameWidth / 2,
+        1090,
+        TextureKeys.BossAngel.Platform
+      )
+      .setSize(1, 1)
+      .setScale(4, 1);
 
-    this.player = new Player(
-      this,
-      this.playerPosition.x,
-      this.playerPosition.y,
-      TextureKeys.Assets.Player
-    );
-    this.add.existing(this.player);
-
-    this.physics.add.collider(this.player, this.platform);
+    // this.physics.add.collider(this.player, this.platform);
 
     //modificare playerHeathbar
 
     this.playerHealthbar = new Healthbar(
       this,
-      1700,
-      100,
+      gameSettings.gameWidth - 200,
+      gameSettings.gameHeight - 100,
       TextureKeys.Assets.PlayerHealthBar
     );
 
     // this.playerHealthbar.setFrameProperties("hearts");
     this.playerHealthbar.setFrameProperties("vita");
+    this.playerHealthbar.setScale(2);
 
     this.bossHealthbar = new Healthbar(
       this,
-      gameSettings.gameWidth - 200,
+      gameSettings.gameWidth / 2,
       100,
       TextureKeys.BossAngel.AngelHealthbar
     );
     this.bossHealthbar.setFrameProperties("healthbar");
+    this.bossHealthbar.setScale(2);
 
     this.boss = new Angel(
       this,
       this.bossPosition.x,
       this.bossPosition.y,
       TextureKeys.BossAngel.Angel
+    );
+
+    this.player = new Player(
+      this,
+      this.playerPosition.x,
+      this.playerPosition.y,
+      TextureKeys.Assets.Player,
+      this.boss
     );
 
     this.time.addEvent({
@@ -193,7 +209,7 @@ export default class AngelBoss extends Phaser.Scene {
       delay: 3000,
       loop: true,
       callback: () => {
-        this.BossMovement();
+        this.boss.BossMovement();
       },
       callbackScope: this,
     });
@@ -228,6 +244,8 @@ export default class AngelBoss extends Phaser.Scene {
       this.DOWN
     );
 
+    // this.boss.BossMovement();
+
     if (this.Q.isDown && time > 500 + this.lastQ) {
       this.lastQ = time;
       if (!this.player.BossDamaged()) {
@@ -237,24 +255,43 @@ export default class AngelBoss extends Phaser.Scene {
 
         gameData.angelHealth += 1;
         this.bossHealthbar.updateBar(gameData.angelHealth);
+        // this.bossHealthbar.updateBar(gameData.monsterHealth);
         if (this.countboss == 7) {
           alert("Player wins");
+
+          this.bossHealthbar.destroy();
+          this.boss.destroy();
+
+          this.secondboss = new Monster(
+            this,
+            this.secondobossPosition.x,
+            this.secondobossPosition.y,
+            TextureKeys.Monster.Monster
+          );
+
+          this.monsterHealth = new Healthbar(
+            this,
+            gameSettings.gameWidth / 2,
+            100,
+            TextureKeys.Monster.MonsterHealthbar
+          );
+          this.monsterHealth.setFrameProperties("healthbar");
+          this.monsterHealth.setScale(2);
+          if (this.Q.isDown && time > 500 + this.lastQ) {
+            this.lastQ = time;
+            if (!this.player.BossDamaged()) {
+              gameData.monsterHealth += 1;
+              this.monsterHealth.updateBar(gameData.monsterHealth);
+            }
+          }
           // this.scene.start(SceneKeys.Jumper);
         }
       }
     }
-    if (this.player.anims.currentAnim.key === "player-fionda") {
-      this.colpo = new Bullets(
-        this,
-        this.player.body.x,
-        this.player.body.y,
-        this.player.getDir()
-      );
 
-      /* setTimeout(() => {
+    /* setTimeout(() => {
         this.colpo.checkCollision()
       }, 300); */
-    }
   }
 
   createBomb() {
@@ -301,25 +338,6 @@ export default class AngelBoss extends Phaser.Scene {
       null,
       this
     );
-  }
-  BossMovement() {
-    const PositionX = [100, 300, 550, 675, 995];
-    const PositionY = [275, 335, 775, 675, 990];
-
-    const randomIndex = Phaser.Math.Between(0, PositionX.length - 1);
-
-    const targetX = PositionX[randomIndex];
-    const targetY = PositionY[randomIndex];
-
-    const dx = targetX - this.boss.x;
-    const dy = targetY - this.boss.y;
-
-    // Calculate the angle and speed
-    const angle = Math.atan2(dy, dx);
-    const speed = 50;
-    const vx = Math.cos(angle) * speed;
-    const vy = Math.sin(angle) * speed;
-    this.boss.setVelocity(vx, vy);
   }
 
   // createRock() {

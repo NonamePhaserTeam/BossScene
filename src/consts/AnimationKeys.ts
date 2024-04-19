@@ -21,7 +21,13 @@ namespace AnimationKeys {
     Sword = "player-sword",
     Jump = "player-jump",
     Blow = "player-blow",
-    fionda = "player-fionda",
+    Fionda = "player-fionda",
+    Walk_fionda = "player-fionda camminata",
+    Walk_sword = "player-spada camminata",
+    Walk_punch = "player-punch camminata",
+    Death = "player-death",
+    Ginocchio = "player-ginocchio",
+    Dush = "player-dush",
   }
 
   export enum SkeletonEnemy {
@@ -30,6 +36,10 @@ namespace AnimationKeys {
   }
 
   export enum AngelBoss {
+    Idle = "idle",
+  }
+
+  export enum MonsterBoss {
     Idle = "idle",
   }
 

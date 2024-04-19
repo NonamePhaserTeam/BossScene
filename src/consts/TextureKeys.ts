@@ -4,6 +4,7 @@ namespace TextureKeys {
   export enum BossAngel {
     Background = "bg-boss-angel",
     Platform = "platform-boss-angel",
+    Platform2 = "platform-boss-angel2",
     AngelHealthbar = "angel-boss-healthbar",
     Angel = "boss-angel",
   }
@@ -52,6 +53,13 @@ namespace TextureKeys {
     player = "player",
     playerHealthBar = "player-healthbar",
     bomb = "bomb",
+  }
+  export enum Monster {
+    idle = "bossIdle",
+    Background = "bg-boss-monster",
+    Platform = "platform-boss-monster",
+    MonsterHealthbar = "monster-boss-healthbar",
+    Monster = "boss-monster",
   }
 }
 

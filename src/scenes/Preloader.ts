@@ -30,7 +30,7 @@ export default class Preloader extends Phaser.Scene {
     );
     this.load.image(
       TextureKeys.BossAngel.Platform,
-      "tiles/BossAngelo/platform.png"
+      "tiles/BossAngelo/back.png"
     );
 
     this.load.image(TextureKeys.Global.Die, "images/die.png");
@@ -117,6 +117,18 @@ export default class Preloader extends Phaser.Scene {
       TextureKeys.Assets.Bomb,
       "spritesheets/bomb/fire.png",
       "spritesheets/bomb/fire.json"
+    );
+
+    this.load.atlas(
+      TextureKeys.Monster.MonsterHealthbar,
+      "healthbars/monster_boss/Demon_healt_bar.png",
+      "healthbars/monster_boss/Demon_healt_bar.json"
+    );
+
+    this.load.atlas(
+      TextureKeys.Monster.Monster,
+      "spritesheets/monster_boss/demoneboss.png",
+      "spritesheets/monster_boss/demoneboss.json"
     );
   }
 
@@ -320,7 +332,7 @@ export default class Preloader extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: AnimationKeys.Player.fionda,
+      key: AnimationKeys.Player.Fionda,
       frames: this.anims.generateFrameNames(TextureKeys.Texture.player, {
         start: 2,
         end: 3,

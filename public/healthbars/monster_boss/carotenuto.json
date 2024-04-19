@@ -1,0 +1,86 @@
+{ "frames": {
+   "ciccionebar 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 1.aseprite": {
+    "frame": { "x": 456, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 2.aseprite": {
+    "frame": { "x": 912, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 3.aseprite": {
+    "frame": { "x": 1368, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 4.aseprite": {
+    "frame": { "x": 1824, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 5.aseprite": {
+    "frame": { "x": 2280, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 6.aseprite": {
+    "frame": { "x": 2736, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   },
+   "ciccionebar 7.aseprite": {
+    "frame": { "x": 3192, "y": 0, "w": 456, "h": 64 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 456, "h": 64 },
+    "sourceSize": { "w": 456, "h": 64 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.2-x64",
+  "image": "ciccionebar.png",
+  "format": "RGBA8888",
+  "size": { "w": 3648, "h": 64 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "ferita", "opacity": 255, "blendMode": "normal" },
+   { "name": "colore", "opacity": 255, "blendMode": "normal" },
+   { "name": "contorno", "opacity": 255, "blendMode": "normal" },
+   { "name": "raf", "opacity": 255, "blendMode": "normal" },
+   { "name": "manoraf", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
