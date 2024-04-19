@@ -8,7 +8,6 @@ export default class Bullets extends Phaser.Physics.Arcade.Sprite {
     playerx: number,
     playery: number,
     direzione: string,
-    dacollidere?: number
     // texture: string,
   ) {
     super(scene, playerx, playery, TextureKeys.Texture.player);
@@ -25,9 +24,9 @@ export default class Bullets extends Phaser.Physics.Arcade.Sprite {
       this.Direzione(this.direzione_shot)[0],
       this.Direzione(this.direzione_shot)[1]
     );
-    setTimeout(() => {
-      this.destroy(true);
-    }, 100);
+    // setTimeout(() => {
+    //   this.destroy(true);
+    // }, 100);
   }
 
   Direzione(dir: string): Array<number> {

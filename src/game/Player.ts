@@ -309,7 +309,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
   private enableShooting = true;
   private dirshot: string;
   private colpo: Bullets;
-  private dacol: number;
 
   constructor(
     scene: Phaser.Scene,
@@ -513,21 +512,21 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     this.on("animationcomplete", () => {
       this.isAttacking = false;
-      // if (this.anims.currentAnim.key === "player-fionda") {
-      //   this.colpo = new Bullets(
-      //     this.scene,
-      //     this.body.x,
-      //     this.body.y,
-      //     this.dirshot
-      //   );
+      if (this.anims.currentAnim.key === "player-fionda") {
+        this.colpo = new Bullets(
+          this.scene,
+          this.body.x,
+          this.body.y,
+          this.dirshot
+        );
 
-      //   /* setTimeout(() => {
-      // 		this.colpo.checkCollision()
-      // 	}, 300); */
-      // }
+        /* setTimeout(() => {
+      		this.colpo.checkCollision()
+      	}, 300); */
+      }
 
       if (this.anims.currentAnim.key === AnimationKeys.Player.Jump) {
-        console.log(this.anims.currentAnim.key);
+        // console.log(this.anims.currentAnim.key);
       }
     });
   }

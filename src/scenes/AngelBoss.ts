@@ -159,7 +159,7 @@ export default class AngelBoss extends Phaser.Scene {
 
     this.playerHealthbar = new Healthbar(
       this,
-      100,
+      1700,
       100,
       TextureKeys.Assets.PlayerHealthBar
     );
