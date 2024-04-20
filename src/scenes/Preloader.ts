@@ -18,9 +18,10 @@ export default class Preloader extends Phaser.Scene {
     // creazione di tutte le animazioni
     // this.CreateAnimations();
     this.CreatePlayerAnims();
+	this.CreateEnemiesAnims();
 
     this.scene.stop(SceneKeys.Preloader);
-    this.scene.start(SceneKeys.AngelBoss);
+    this.scene.start(SceneKeys.DemonBoss);
   }
 
   LoadImages() {
@@ -72,6 +73,10 @@ export default class Preloader extends Phaser.Scene {
       TextureKeys.Caverna.CavernaOne,
       "tiles/BossAngelo/caverna1.png"
     );
+	this.load.image(
+		"Sasso",
+		"extra/Boulder.png"
+	)
   }
 
   LoadSpritesheets() {
@@ -130,6 +135,12 @@ export default class Preloader extends Phaser.Scene {
       "spritesheets/monster_boss/demoneboss.png",
       "spritesheets/monster_boss/demoneboss.json"
     );
+
+	this.load.atlas(
+		TextureKeys.DemonBoss.Demon,
+		"spritesheets/demone/demone.png",
+		"spritesheets/demone/demone.json",
+	)
   }
 
   // CreateAnimations() {
@@ -441,33 +452,85 @@ export default class Preloader extends Phaser.Scene {
 	});
 }
 
-  // CreateEnemiesAnims() {
-  //   this.anims.create({
-  //     key: AnimationKeys.SkeletonEnemy.Idle,
-  //     frames: this.anims.generateFrameNames(TextureKeys.Texture.SkeletonEnemy, {
-  //       start: 1,
-  //       end: 4,
-  //       zeroPad: 1,
-  //       prefix: "skeleton-idle",
-  //       suffix: ".png",
-  //     }),
-  //     frameRate: 6,
-  //     repeat: -1,
-  //   });
+  CreateEnemiesAnims() {
+		// this.anims.create({
+		// 	key: AnimationKeys.SkeletonEnemy.Idle,
+		// 	frames: this.anims.generateFrameNames(TextureKeys.Texture.SkeletonEnemy, {
+		// 		start: 1,
+		// 		end: 4,
+		// 		zeroPad: 1,
+		// 		prefix: "skeleton-idle",
+		// 		suffix: ".png",
+		// 	}),
+		// 	frameRate: 6,
+		// 	repeat: -1,
+		// });
 
-  //   this.anims.create({
-  //     key: AnimationKeys.SkeletonEnemy.Walk,
-  //     frames: this.anims.generateFrameNames(TextureKeys.Texture.SkeletonEnemy, {
-  //       start: 1,
-  //       end: 8,
-  //       zeroPad: 1,
-  //       prefix: "skeleton-walk",
-  //       suffix: ".png",
-  //     }),
-  //     frameRate: 6,
-  //     repeat: -1,
-  //   });
-  // }
+		// this.anims.create({
+		// 	key: AnimationKeys.SkeletonEnemy.Walk,
+		// 	frames: this.anims.generateFrameNames(TextureKeys.Texture.SkeletonEnemy, {
+		// 		start: 1,
+		// 		end: 8,
+		// 		zeroPad: 1,
+		// 		prefix: "skeleton-walk",
+		// 		suffix: ".png",
+		// 	}),
+		// 	frameRate: 6,
+		// 	repeat: -1,
+		// });
+
+		this.anims.create({ 
+			key: AnimationKeys.AngelBoss.Idle,
+			frames: this.anims.generateFrameNames(TextureKeys.BossAngel.Angel, {
+				start: 1,
+				end: 5,
+				zeroPad: 1,
+				prefix: "boss",
+				suffix: ".png",
+			}),
+			frameRate: 6,
+			repeat: -1,
+		});
+
+		this.anims.create({ 
+			key: AnimationKeys.DemonBoss.Idle,
+			frames: this.anims.generateFrameNames(TextureKeys.DemonBoss.Demon, {
+				start: 1,
+				end: 6,
+				zeroPad: 1,
+				prefix: "demonesistemato",
+				suffix: ".png",
+			}),
+			frameRate: 6,
+			repeat: -1,
+		});
+
+		this.anims.create({ 
+			key: AnimationKeys.DemonBoss.Walk,
+			frames: this.anims.generateFrameNames(TextureKeys.DemonBoss.Demon, {
+				start: 7,
+				end: 19,
+				zeroPad: 1,
+				prefix: "demonesistemato",
+				suffix: ".png",
+			}),
+			frameRate: 6,
+			repeat: -1,
+		});
+
+		this.anims.create({ 
+			key: AnimationKeys.DemonBoss.Attack,
+			frames: this.anims.generateFrameNames(TextureKeys.DemonBoss.Demon, {
+				start: 20,
+				end: 34,
+				zeroPad: 1,
+				prefix: "demonesistemato",
+				suffix: ".png",
+			}),
+			frameRate: 6,
+			repeat: -1,
+		});
+	}
 
   // CreateEntitiesAnims() {}
 }

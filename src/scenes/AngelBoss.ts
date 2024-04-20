@@ -159,8 +159,6 @@ export default class AngelBoss extends Phaser.Scene {
       .setSize(1, 1)
       .setScale(4, 1);
 
-    // this.physics.add.collider(this.player, this.platform);
-
     //modificare playerHeathbar
 
     this.playerHealthbar = new Healthbar(
@@ -195,7 +193,7 @@ export default class AngelBoss extends Phaser.Scene {
       this.playerPosition.x,
       this.playerPosition.y,
       TextureKeys.Assets.Player,
-      this.boss
+    //   this.boss
     );
 
     this.time.addEvent({
@@ -244,53 +242,89 @@ export default class AngelBoss extends Phaser.Scene {
       this.UP,
       this.DOWN
     );
-
     // this.boss.BossMovement();
 	
-	if (this.player.HandleCollision()) {
-		this.countboss++;
-		// this.player.HandleDamage();
-		// this.playerHealthbar.updateBar(gameData.playerHealth);
-		gameData.angelHealth -= 1;
-		this.bossHealthbar.updateBar(gameData.angelHealth);
-		
-	// gameData.angelHealth += 1;
-	// this.bossHealthbar.updateBar(gameData.monsterHealth);
-		if (this.countboss == 7) {
-			alert("Player wins");
-
-			this.bossHealthbar.destroy();
-			this.boss.destroy();
-
-			this.secondboss = new Monster(
-				this,
-				this.secondobossPosition.x,
-				this.secondobossPosition.y,
-				TextureKeys.Monster.Monster
-			);
-
-			this.monsterHealth = new Healthbar(
+	if (this.Q.isDown && time > 500 + this.lastQ) {
+		this.lastQ = time;
+		if (!this.player.BossDamaged()) {
+		  this.countboss++;
+		  // this.player.HandleDamage();
+		  // this.playerHealthbar.updateBar(gameData.playerHealth);
+  
+		  gameData.angelHealth += 1;
+		  this.bossHealthbar.updateBar(gameData.angelHealth);
+		  // this.bossHealthbar.updateBar(gameData.monsterHealth);
+			if (this.countboss == 7) {
+				this.time.addEvent({
+					delay: 0, // Dopo 2 secondi (2000 millisecondi)
+					callback: this.shakeCamera,
+					callbackScope: this,
+				});
+				this.flash();
+	
+				this.bossHealthbar.destroy();
+				this.boss.destroy();
+			
+				this.secondboss = new Monster(
+					this,
+					this.secondobossPosition.x,
+					this.secondobossPosition.y,
+					TextureKeys.Monster.Monster
+				);
+  
+				this.monsterHealth = new Healthbar(
 				this,
 				gameSettings.gameWidth / 2,
 				100,
 				TextureKeys.Monster.MonsterHealthbar
-			);
-			this.monsterHealth.setFrameProperties("healthbar");
-			this.monsterHealth.setScale(2);
-			if (this.Q.isDown && time > 500 + this.lastQ) {
-				this.lastQ = time;
-				if (!this.player.BossDamaged()) {
-					gameData.monsterHealth += 1;
-					this.monsterHealth.updateBar(gameData.monsterHealth);
+				);
+				this.monsterHealth.setFrameProperties("healthbar");
+				this.monsterHealth.setScale(2);
+				if (this.Q.isDown && time > 500 + this.lastQ) {
+					this.lastQ = time;
+					if (!this.player.BossDamaged()) {
+						gameData.monsterHealth += 1;
+						this.monsterHealth.updateBar(gameData.monsterHealth);
+					}
 				}
-			}
-			// this.scene.start(SceneKeys.Jumper);
+			}	// this.scene.start(SceneKeys.Jumper);
 		}
 	}
     /* setTimeout(() => {
         this.colpo.checkCollision()
       }, 300); */
   }
+
+  
+  flash() {
+    const rect = this.add.graphics();
+    rect.fillStyle(0xffffff, 1); // Imposta il colore e l'opacità del rettangolo (bianco, opaco)
+    rect.fillRect(0, 0, gameSettings.gameWidth * 2, gameSettings.gameHeight); // Disegna un rettangolo a schermo intero
+    rect.setDepth(9999); // Assicura che il rettangolo sia sopra a tutti gli altri elementi
+
+    const flashTween = this.tweens.add({
+      targets: rect,
+      alpha: { from: 1, to: 0.7 }, // Aumenta l'opacità da 1 a 0 per farlo scomparire
+      duration: 300, // Durata del flash (in millisecondi)
+      ease: "Linear",
+      yoyo: true, // Ripeti l'effetto andando da 1 ad 0 e poi da 0 a 1
+      repeat: 1, // Ripeti l'effetto due volte (una volta per ogni direzione dello yoyo)
+      onComplete: () => {
+        rect.destroy();
+      },
+    });
+
+    // Avvia il tween
+    flashTween.play();
+  }
+  shakeCamera() {
+    const shakeDuration = 1000; // Durata del tremore in millisecondi (0.5 secondi)
+    const shakeIntensity = 0.05; // Intensità del tremore
+
+    // Fa tremare la camera principale della scena
+    this.cameras.main.shake(shakeDuration, shakeIntensity);
+  }
+  
 
   createBomb() {
     const bossPositionX = this.boss.x;

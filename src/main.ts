@@ -4,6 +4,7 @@ import AngelBoss from "./scenes/AngelBoss"
 import Preloader from "./scenes/Preloader"
 
 import { gameSettings } from "./consts/GameSettings"
+import DemonBoss from "./scenes/DemonBoss"
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -27,6 +28,7 @@ const config: Phaser.Types.Core.GameConfig = {
   scene: [
     Preloader,
     AngelBoss,
+	DemonBoss
   ],
 }
 

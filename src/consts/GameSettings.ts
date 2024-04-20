@@ -3,6 +3,6 @@ export let gameSettings: GameSettings = {
   gameHeight: 1080,
   bgColor: "#000000",
   gravity: { x: 0, y: 200 },
-  debug: true,
+  debug: false,
   zoom: 1,
 };

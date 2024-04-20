@@ -39,6 +39,12 @@ namespace AnimationKeys {
     Idle = "idle",
   }
 
+  export enum DemonBoss {
+	Idle = "boss-idle",
+	Walk = "walk",
+	Attack = "attack",
+  }
+
   export enum MonsterBoss {
     Idle = "idle",
   }

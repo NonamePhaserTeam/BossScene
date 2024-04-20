@@ -12,7 +12,7 @@ export default class Bullets extends Phaser.Physics.Arcade.Sprite {
     // texture: string,
     dacollidere?: number
   ) {
-    super(scene, playerx, playery, TextureKeys.Texture.player);
+    super(scene, playerx, playery, "Sasso");
 
     scene.physics.world.enable(this);
     this.setCollideWorldBounds(true);

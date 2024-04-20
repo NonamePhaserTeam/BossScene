@@ -20,7 +20,7 @@ export default class Healthbar extends Phaser.GameObjects.Sprite {
   }
 
   updateBar(frame_number: number) {
-	console.log("updateBar", frame_number);
+	// console.log("updateBar", frame_number);
     let frame = this.frame_names + frame_number + ".png";
     // if (frame_number > 6) {
     //   alert("gioco terminato");

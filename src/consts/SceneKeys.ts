@@ -4,6 +4,7 @@ enum SceneKeys
 {
 	Preloader = 'preloader',
 	AngelBoss = 'boss-angel',
+	DemonBoss = 'boss-demon',
 	HealthBar = 'healthbar-scene'
 }
 

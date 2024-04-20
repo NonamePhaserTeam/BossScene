@@ -28,7 +28,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     x: number,
     y: number,
     texture: string,
-    enemy: Enemy | Angel /*| Boss*/,
+    // enemy: Enemy | Angel /*| Boss*/,
     frame?: string | number
   ) {
     super(scene, x, y, texture, frame);
@@ -36,7 +36,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     // this.setInteractive(true);
     scene.add.existing(this);
     this.parent = scene;
-    this.mob = enemy;
+    // this.mob = enemy;
     this.create();
   }
 
@@ -248,38 +248,34 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.anims.play(AnimationKeys.Player.Fionda, true);
         this.handleResetFlag(this.enableShooting, 300);
       } // ALTO DESTRA
+
+	  	this.on("animationcomplete", () => {
+			this.isAttacking = false;
+			if (this.anims.currentAnim.key === AnimationKeys.Player.Fionda) {
+				this.colpo = new Bullets(
+					this.scene,
+					this.body.x,
+					this.body.y + 40,
+					this.dirshot
+				);
+				this.scene.add.existing(this.colpo);
+				// console.log("HandleCollision")
+				this.scene.physics.add.collider(this.colpo, this.mob, () => {
+				if (this.enableHit) this.mob.OnHit(10);
+
+					this.enableHit = false;
+					setTimeout(() => {
+						this.enableHit = true;
+					}, 300);
+
+				console.log("hit")
+				// this.colpo.collide();
+				});
+			}
+		});
     }
 
     
-  }
-
-  HandleCollision(): boolean {
-	  this.on("animationcomplete", () => {
-		  this.isAttacking = false;
-		  if (this.anims.currentAnim.key === AnimationKeys.Player.Fionda) {
-			  this.colpo = new Bullets(
-				  this.scene,
-				  this.body.x,
-				  this.body.y + 40,
-				  this.dirshot
-				);
-				this.scene.add.existing(this.colpo);
-				console.log("HandleCollision")
-		  this.scene.physics.add.collider(this.colpo, this.mob, () => {
-			if (this.enableHit) this.mob.OnHit(10);
-  
-			this.enableHit = false;
-			setTimeout(() => {
-			  this.enableHit = true;
-			}, 300);
-
-			return true;
-			console.log("hit")
-			// this.colpo.collide();
-		  });
-		}
-	  });
-	  return false;
   }
 
   HandleDamage() {

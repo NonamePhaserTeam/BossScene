@@ -16,6 +16,10 @@ namespace TextureKeys {
     rock = "rock",
   }
 
+  export enum DemonBoss {
+	Demon = "demon"
+  }
+
   export enum Global {
     Die = "die",
     Back = "back",
